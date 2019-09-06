@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Built-By: Pramod.Rathod
+Build-Jdk: 12.0.1-redhat
+Class-Path: lib/pippo-core-1.12.0.jar lib/slf4j-api-1.7.7.jar lib/slf4
+ j-simple-1.7.7.jar lib/pippo-jetty-1.12.0.jar lib/jetty-server-9.4.11
+ .v20180605.jar lib/javax.servlet-api-3.1.0.jar lib/jetty-http-9.4.11.
+ v20180605.jar lib/jetty-util-9.4.11.v20180605.jar lib/jetty-io-9.4.11
+ .v20180605.jar lib/jetty-annotations-9.4.11.v20180605.jar lib/jetty-p
+ lus-9.4.11.v20180605.jar lib/jetty-jndi-9.4.11.v20180605.jar lib/jett
+ y-webapp-9.4.11.v20180605.jar lib/jetty-xml-9.4.11.v20180605.jar lib/
+ javax.annotation-api-1.2.jar lib/asm-6.2.jar lib/asm-commons-6.2.jar 
+ lib/asm-tree-6.2.jar lib/asm-analysis-6.2.jar lib/websocket-server-9.
+ 4.11.v20180605.jar lib/websocket-common-9.4.11.v20180605.jar lib/webs
+ ocket-api-9.4.11.v20180605.jar lib/websocket-client-9.4.11.v20180605.
+ jar lib/jetty-client-9.4.11.v20180605.jar lib/websocket-servlet-9.4.1
+ 1.v20180605.jar lib/jetty-servlet-9.4.11.v20180605.jar lib/jetty-secu
+ rity-9.4.11.v20180605.jar
+Main-Class: com.mydkvstore.PippoLauncher
+Created-By: Maven Integration for Eclipse
+
