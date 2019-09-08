@@ -18,7 +18,7 @@
     <protobuf.version>3.8.0</protobuf.version>
     <pippo.version>1.12.0</pippo.version>
     <slf4j.version>1.7.7</slf4j.version>
-    <StoreService.class>com.mydkvstore.PippoLauncher</StoreService.class>
+    <StoreService.class>com.mydkvstore.httpservice.StoreHttpServiceLauncher</StoreService.class>
   </properties>
   
   <repositories>
@@ -96,9 +96,21 @@
 	    <artifactId>websocket-client</artifactId>
 	    <version>9.4.20.v20190813</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.eclipse.jetty.websocket/websocket-server -->
+	<dependency>
+	    <groupId>org.eclipse.jetty.websocket</groupId>
+	    <artifactId>websocket-server</artifactId>
+	    <version>9.4.20.v20190813</version>
+	</dependency>
 		
-
-	    
+	<!-- https://mvnrepository.com/artifact/org.eclipse.jetty.websocket/javax-websocket-server-impl -->
+	<dependency>
+	    <groupId>org.eclipse.jetty.websocket</groupId>
+	    <artifactId>javax-websocket-server-impl</artifactId>
+	    <version>9.4.20.v20190813</version>
+	</dependency>
+		 
   </dependencies>
   
   
@@ -178,6 +190,7 @@
 
            <build>
                <plugins>
+               	   <!-- 	
                    <plugin>
                        <groupId>org.apache.maven.plugins</groupId>
                        <artifactId>maven-jar-plugin</artifactId>
@@ -192,7 +205,33 @@
                            </archive>
                        </configuration>
                    </plugin>
-
+                    -->
+                    
+                   <plugin>
+					    <groupId>org.apache.maven.plugins</groupId>
+					    	<artifactId>maven-assembly-plugin</artifactId>
+					    	<version>3.1.1</version>
+					    <configuration>
+						    <descriptorRefs>
+						      <descriptorRef>jar-with-dependencies</descriptorRef>
+						    </descriptorRefs>
+						    <archive>
+						      <manifest>
+						       	<mainClass>${StoreService.class}</mainClass>
+						      </manifest>
+						    </archive>
+					    </configuration>
+					    <executions>
+						     <execution>
+						      	<phase>package</phase>
+							    <goals>
+							       <goal>single</goal>
+							    </goals>
+						     </execution>
+					    </executions>
+				   </plugin>
+					
+					<!-- 
                    <plugin>
                        <groupId>org.codehaus.mojo</groupId>
                        <artifactId>exec-maven-plugin</artifactId>
@@ -208,6 +247,7 @@
                            <mainClass>${StoreService.class}</mainClass>
                        </configuration>
                    </plugin>
+                    -->
                </plugins>
            </build>
 
