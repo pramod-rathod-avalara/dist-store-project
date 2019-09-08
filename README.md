@@ -9,10 +9,9 @@ There are many way to achieve this in Java, as listed below.
 1. Java object Serialization over network using Sockets
 2. Java RPC
 3. Java HTTP
-4. Java WebSockets (If case if you any server to act as publisher/receiver)
+4. Java WebSockets (In case if you want any node to act as either publisher/receiver or both)
 
 ## How To Build
----
 
 Steps:
 
@@ -23,7 +22,6 @@ Steps:
 After above steps a folder dist-store-project/Store/target is created and all goodies are in that folder.
 
 ## How To Run
----
 
 Steps:
 
