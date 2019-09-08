@@ -12,7 +12,6 @@ There are many way to achieve this in Java, as listed below.
 4. Java WebSockets (In case if you want any node to act as either publisher/receiver or both)
 
 ## How To Build
----
 
 Steps:
 
@@ -23,7 +22,6 @@ Steps:
 After above steps a folder dist-store-project/Store/target is created and all goodies are in that folder.
 
 ## How To Run
----
 
 Steps:
 
