@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author Pramod.Rathod
@@ -24,7 +25,7 @@ public class StringKeyValue implements KeyValue<String, String>, DataListenerPro
 	
 	public StringKeyValue() {
 		this.map = new ConcurrentHashMap<String, String>(); 
-		this.dataListeners = new ArrayList<DataListener<String,String>>();
+		this.dataListeners = new CopyOnWriteArrayList<DataListener<String,String>>();
 	}
 	
 	public StringKeyValue(Map<String,String> map) {
