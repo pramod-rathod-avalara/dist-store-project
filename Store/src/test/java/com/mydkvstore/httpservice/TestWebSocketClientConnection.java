@@ -5,14 +5,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.eclipse.jetty.websocket.client.WebSocketClient;
+import org.junit.Test;
 
-public class TestConnection {
+public class TestWebSocketClientConnection {
 	
-	public static void main(String [] args) {
+	@Test
+	public void testWebSocketClientConnection() {
 		
 		System.out.println("Inside class");
-		
-		
 		WebSocketClient storeWebSocketclient = new WebSocketClient();
 		StoreWebSocket storeWebSocket = new StoreWebSocket();
 		
@@ -24,7 +24,6 @@ public class TestConnection {
 			ClientUpgradeRequest request = new ClientUpgradeRequest();
 			storeWebSocketclient.connect(storeWebSocket, listenerURI, request);
 			storeWebSocket.awaitClose(30, TimeUnit.SECONDS);
-			//storeWebSocketclient.set
 			System.out.printf("Connecting to : %s%n", listenerURI);
 		} catch (Exception e) {
 			System.out.printf("WebSocket Clinet Error: ", e);

@@ -12,7 +12,7 @@ import ro.pippo.core.Pippo;
  */
 public class StoreHttpServiceLauncher {
 	
-	private final static Logger log = LoggerFactory.getLogger(StoreHttpService.class);
+	private final static Logger log = LoggerFactory.getLogger(StoreHttpServiceLauncher.class);
 
     public static void main(String[] args) {
     	log.info(">> Program arguments { ");
