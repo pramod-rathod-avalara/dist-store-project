@@ -44,6 +44,6 @@ With the last command the server (Jetty) started on port `9339`. The port of the
 ### Step 3: Running the publisher process
 
 1. `cd dist-store-project/Store/target`
-2. `java -cp Store-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.mydkvstore.httpservice.StoreHttpServiceLauncher --port 8338 --listener 9339`
+2. `java -cp Store-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.mydkvstore.httpservice.StoreHttpServiceLauncher --port 8338 --listener localhost:9339`
 
 With the last command the server (Jetty) started on port `8338`. The port of the application will be used as to serve 2 REST endpoints to set and get value from the store. With the listener argument, port 9339 will be registered as a listener that will listen for any changes on the store.
